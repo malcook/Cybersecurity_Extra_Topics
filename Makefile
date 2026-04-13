@@ -20,3 +20,6 @@ changes:
 	git add .
 	git commit -m "Update page content"
 	git push
+
+where:
+	gh run list
