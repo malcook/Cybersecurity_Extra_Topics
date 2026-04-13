@@ -34,7 +34,7 @@
 * Slide 1
 huhn
 
-* Slide 2
+** Slide 2
 
 * Review / Restatement
 yes
