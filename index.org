@@ -30,45 +30,45 @@
 #+REVEAL_THEME: simple
 #+REVEAL_EXTRA_CSS: ./index.css
 
+* test slide 1
+* test slide 2
 
-* Slide 1
-huhn
 
-** Slide 2
+* COMMENT 
 
-* Review / Restatement
+** Review / Restatement
 yes
-** blat
+*** blat
 blat
-*** theree
+**** theree
 foo bar
 - Your phone and your email are used to verify
 - About people trying to trick you
 - Goal: fast correct decisions
-** Four Rules
+*** Four Rules
 
-* Account Takeover
+** Account Takeover
 - Email controls everything
 
-** What Happens Next
+*** What Happens Next
 - Password reset
 - Lockout
 - Financial access
 
 
-* Follow Your Browser's Warning
-**  Demo
+** Follow Your Browser's Warning
+***  Demo
 - Show warning screen
 - Decision: proceed or stop
 
-** Correct Action
+*** Correct Action
 - STOP
 - Close page
 - Do not override warning
 
-* Passwords best practices
+** Passwords best practices
 
-** Activity: Testing Password Strength
+*** Activity: Testing Password Strength
 
 Visit one or more of these websites to test the strength of your 
 current passwords or practice creating strong passwords.
@@ -80,23 +80,23 @@ current passwords or practice creating strong passwords.
 
 
 
-** Password Rule
+*** Password Rule
 - One password per site
 
 
-*** Use A Password Manager !
+**** Use A Password Manager !
 
-**** Using the Chrome browser's Password Manager
+***** Using the Chrome browser's Password Manager
 
 
-** Use and "Authenticator"
-*** Use Google Authenticator
+*** Use and "Authenticator"
+**** Use Google Authenticator
 TBW: screen snapshot
 
 
-* Use Two-Factor Authentication (2FA) 
+** Use Two-Factor Authentication (2FA) 
 
-** what is it
+*** what is it
 factor of authentication
 Piece of evidence used to verify your identity during log-in
 
@@ -105,7 +105,7 @@ There are 3 different types of factors:
  - Possession factor
  - Inherence factor
 
-** What are the different kinds of factors?
+*** What are the different kinds of factors?
 
 Knowledge factor – something you know, like a password or PIN
 Easiest to hack – there are only so many possible combinations of numbers, letters, and symbols you can use.
@@ -125,34 +125,34 @@ with an  Authenticator App
 - Adds second step
 - Protects even if password is stolen
 
-** Why Not SMS
+*** Why Not SMS
 - Phone numbers can be hijacked
 - Codes can be intercepted
 - Attackers ask for codes
 
 
-** Use an Authenticator App
+*** Use an Authenticator App
 - Codes generated on device
 - Not tied to phone number
 - Works offline
 
-** How It Works
+*** How It Works
 - Scan QR code
 - Enter 6-digit code
 - Rotates every 30 seconds
 
-** Critical Rule
+*** Critical Rule
 - Never share your code
 
-** Backup Codes
+*** Backup Codes
 - Write them down
 - Store safely
 
 
 
-* Demo: Password Manager (Live)
+** Demo: Password Manager (Live)
 
-** The Problem (Reuse)
+*** The Problem (Reuse)
 - Example login
 
 #+BEGIN_NOTES
@@ -168,7 +168,7 @@ Password: Password123
 This is what people actually do. It’s unsafe.
 #+END_NOTES
 
-** Let Chrome Generate
+*** Let Chrome Generate
 - Right-click password field
 - Select “Suggest strong password”
 
@@ -176,7 +176,7 @@ This is what people actually do. It’s unsafe.
 You don’t create passwords anymore. The browser does.
 #+END_NOTES
 
-** Save Password
+*** Save Password
 - Submit login
 - Click “Save” when prompted
 
@@ -184,7 +184,7 @@ You don’t create passwords anymore. The browser does.
 Chrome stores it securely. You don’t need to remember it.
 #+END_NOTES
 
-** Autofill Demo
+*** Autofill Demo
 - Log out
 - Return to login page
 - Select saved account
@@ -193,7 +193,7 @@ Chrome stores it securely. You don’t need to remember it.
 Next time, it fills it in automatically.
 #+END_NOTES
 
-** Password Vault
+*** Password Vault
 - Navigate to:
 #+BEGIN_EXAMPLE
 chrome://password-manager/passwords
@@ -205,7 +205,7 @@ chrome://password-manager/passwords
 All your passwords are stored here.
 #+END_NOTES
 
-** Enable Sync
+*** Enable Sync
 - Open Settings
 - Go to “You and Google → Sync”
 - Ensure Passwords is ON
@@ -214,7 +214,7 @@ All your passwords are stored here.
 This makes your passwords available on your phone and other devices.
 #+END_NOTES
 
-** Protect the Account
+*** Protect the Account
 - Go to:
 #+BEGIN_EXAMPLE
 https://myaccount.google.com/security
@@ -226,7 +226,7 @@ This only works safely if your Google account is protected.
 Turn this on. Use an authenticator app, not text messages.
 #+END_NOTES
 
-** One Rule
+*** One Rule
 - Never reuse passwords
 - Let the browser generate them
 
@@ -234,7 +234,7 @@ Turn this on. Use an authenticator app, not text messages.
 Never reuse passwords. Let the browser handle it every time.
 #+END_NOTES
 
-** Optional: Edit Password
+*** Optional: Edit Password
 - Open saved password
 - Replace with generated one
 
@@ -242,25 +242,25 @@ Never reuse passwords. Let the browser handle it every time.
 You can always update weak passwords later.
 #+END_NOTES
 
-** Optional: Mobile Sync
+*** Optional: Mobile Sync
 - Same passwords appear on phone
 
 #+BEGIN_NOTES
 Once sync is on, everything carries over automatically.
 #+END_NOTES
 
-* Spam Filters Are Helpful, Not Sufficient
+** Spam Filters Are Helpful, Not Sufficient
 - Some scams caught
 - Many are not
 - Inbox ≠ safe
 
-* Using ChatGPT to Check Emails
+** Using ChatGPT to Check Emails
 - Paste suspicious email text
 - Prompt: “Spam or not? Analyze this email”
 - Do not include sensitive data
 
 
-* What To Do (Starting Today)
+** What To Do (Starting Today)
 - Use a password manager.  Simplist is your browser (Chrome or Firefox).
 - Let it generate passwords (never reuse passwords)
 - Turn on sync so passwords are available on all devices
@@ -280,7 +280,7 @@ Keep this blunt and fast. This is the only slide they need to remember.
 Do not elaborate. Reinforce that partial adoption is still valuable, but these are the targets.
 #+END_NOTES
 
-* Need Help Setting This Up?
+** Need Help Setting This Up?
 - Bring your phone, tablet, or laptop
 - We will help you:
 -- Set up password manager
@@ -293,7 +293,7 @@ Position this as practical help, not more teaching.
 Lower barrier to entry. Emphasize hands-on support.
 #+END_NOTES
 
-* Drop-In Support Session
+** Drop-In Support Session
 - Location: [INSERT LOCATION]
 - Time: [INSERT TIME]
 - Contact: [INSERT CONTACT INFO]
@@ -303,8 +303,8 @@ Keep logistics clear and minimal.
 Encourage attendance explicitly: most will not act without help.
 #+END_NOTES
 
-* Social Time - Have you been hacked? Three stories!
-* End
+** Social Time - Have you been hacked? Three stories!
+** End
 
 # * What This Class Is
 # - About people trying to trick you
@@ -632,68 +632,68 @@ Encourage attendance explicitly: most will not act without help.
 
 
 
-* The Only Four Rules
+** The Only Four Rules
 - Never click links in unexpected messages
 - Never send money on request
 - Never share codes or passwords
 - Verify source of message using a known contact method
 
-* TEST
-*** Demo 1 (Decide Now)
+** TEST
+**** Demo 1 (Decide Now)
 #+BEGIN_EXAMPLE
 From: security@alerts-usbank.com
 Account restricted. Restore access now:
 http://usbank.verify-account-security.com
 #+END_EXAMPLE
 
-*** Demo 1 (Answer)
+**** Demo 1 (Answer)
 - SCAM
 - Rule: Do not click links
 
-*** Demo 2 (Decide Now)
+**** Demo 2 (Decide Now)
 #+BEGIN_EXAMPLE
 Commerce Bank: fraud alert.
 Call (816) 555-0199 immediately.
 #+END_EXAMPLE
 
-*** Demo 2 (Answer)
+**** Demo 2 (Answer)
 - SCAM
 - Rule: Verify using known contact
 
-*** Demo 3 (Decide Now)
+**** Demo 3 (Decide Now)
 #+BEGIN_EXAMPLE
 Evergy disconnect today.
 Pay now: http://evergy-paynow.net
 #+END_EXAMPLE
 
-*** Demo 3 (Answer)
+**** Demo 3 (Answer)
 - SCAM
 - Rule: Do not send money
 
-*** Demo 4 (Decide Now)
+**** Demo 4 (Decide Now)
 #+BEGIN_EXAMPLE
 This is Medicare.
 Verify your number to continue benefits.
 #+END_EXAMPLE
 
-*** Demo 4 (Answer)
+**** Demo 4 (Answer)
 - SCAM
 - Rule: Do not share information
 
-*** Demo 5 (Decide Now)
+**** Demo 5 (Decide Now)
 #+BEGIN_EXAMPLE
 Grandchild in trouble.
 Need gift cards urgently.
 #+END_EXAMPLE
 
-*** Demo 5 (Answer)
+**** Demo 5 (Answer)
 - SCAM
 - Rule: Never send money
 
 
 
 
-*** Realistic Demo 1 (Decide Now)
+**** Realistic Demo 1 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Important: Action Needed on Your Account
 From: U.S. Bank <security@alerts-usbank.com>
@@ -710,11 +710,11 @@ Failure to act may result in restrictions.
 U.S. Bank Fraud Prevention
 #+END_EXAMPLE
 
-*** Realistic Demo 1 (Answer)
+**** Realistic Demo 1 (Answer)
 - SCAM
 - Rule: Do not click links
 
-*** Realistic Demo 2 (Decide Now)
+**** Realistic Demo 2 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: USPS Delivery Issue
 From: USPS <tracking@usps-delivery.com>
@@ -727,12 +727,12 @@ http://usps.com-track-help.net/resolve
 Tracking #: 940011223344
 #+END_EXAMPLE
 
-*** Realistic Demo 2 (Answer)
+**** Realistic Demo 2 (Answer)
 - SCAM
 - Fake domain
 - Rule: Do not click links
 
-*** Realistic Demo 3 (Decide Now)
+**** Realistic Demo 3 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Microsoft Security Alert
 From: Microsoft <account-security@microsoft.com>
@@ -743,11 +743,11 @@ Secure your account:
 https://login.microsoft.com.security-checkup.co
 #+END_EXAMPLE
 
-*** Realistic Demo 3 (Answer)
+**** Realistic Demo 3 (Answer)
 - SCAM
 - Rule: Verify independently
 
-*** Realistic Demo 4 (Decide Now)
+**** Realistic Demo 4 (Decide Now)
 #+BEGIN_EXAMPLE
 SMS:
 Evergy: Service interruption today.
@@ -755,11 +755,11 @@ Pay immediately:
 http://evergy-paynow.net
 #+END_EXAMPLE
 
-*** Realistic Demo 4 (Answer)
+**** Realistic Demo 4 (Answer)
 - SCAM
 - Rule: Do not send money
 
-*** Realistic Demo 5 (Decide Now)
+**** Realistic Demo 5 (Decide Now)
 #+BEGIN_EXAMPLE
 SMS:
 Hi Grandma, this is Jake.
@@ -767,11 +767,11 @@ New phone. Need help paying a bill.
 Can you get gift cards?
 #+END_EXAMPLE
 
-*** Realistic Demo 5 (Answer)
+**** Realistic Demo 5 (Answer)
 - SCAM
 - Rule: Never send money
 
-*** Adversarial Demo 1 (Decide Now)
+**** Adversarial Demo 1 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Your Amazon.com Order
 From: Amazon <auto-confirm@amazon.com>
@@ -783,12 +783,12 @@ If not you, call:
 1-888-280-4331
 #+END_EXAMPLE
 
-*** Adversarial Demo 1 (Answer)
+**** Adversarial Demo 1 (Answer)
 - SCAM (likely)
 - Forces panic response
 - Rule: Verify independently
 
-*** Adversarial Demo 2 (Decide Now)
+**** Adversarial Demo 2 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Security Code
 From: Google <no-reply@accounts.google.com>
@@ -796,23 +796,23 @@ From: Google <no-reply@accounts.google.com>
 Your code is: 492771
 #+END_EXAMPLE
 
-*** Adversarial Demo 2 (Answer)
+**** Adversarial Demo 2 (Answer)
 - Contextual scam
 - Someone else is asking for this code
 - Rule: Never share codes
 
-*** Adversarial Demo 3 (Decide Now)
+**** Adversarial Demo 3 (Decide Now)
 #+BEGIN_EXAMPLE
 Phone:
 “This is your bank fraud department.
 Can you confirm the code we sent?”
 #+END_EXAMPLE
 
-*** Adversarial Demo 3 (Answer)
+**** Adversarial Demo 3 (Answer)
 - SCAM
 - Rule: Never share codes
 
-*** Adversarial Demo 4 (Decide Now)
+**** Adversarial Demo 4 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: DocuSign Request
 From: DocuSign <dse@docusign.net>
@@ -821,11 +821,11 @@ Review document:
 https://docusign.secure-docs-review.com
 #+END_EXAMPLE
 
-*** Adversarial Demo 4 (Answer)
+**** Adversarial Demo 4 (Answer)
 - SCAM
 - Rule: Do not click links
 
-*** Adversarial Demo 5 (Decide Now)
+**** Adversarial Demo 5 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Password Reset Confirmation
 From: PayPal <service@paypal.com>
@@ -835,47 +835,47 @@ Your password was changed.
 If not you, contact support.
 #+END_EXAMPLE
 
-*** Adversarial Demo 5 (Answer)
+**** Adversarial Demo 5 (Answer)
 - Treat as threat
 - Go directly to site
 - Rule: Verify independently
 
 
-*** Practice Round
+**** Practice Round
 - 10 seconds each
 - SAFE or SCAM
 
-*** Practice Items
+**** Practice Items
 - Amazon confirm order
 - USPS update address
 - Friend attachment
 - IRS demand
 
-*** Practice Answers
+**** Practice Answers
 - All SCAM
 - Pattern: unexpected + action
 
-*** Final Test
+**** Final Test
 - 8 items
 - No discussion
 
 
-* If Unsure
+** If Unsure
 - Do nothing
 - Verify independently
 
-* Summary
+** Summary
 - Scams = pressure
 - Rules = defense
 - Tools help, rules decide
 
 
 
-* Android tips
-** Reading a QR Code
+** Android tips
+*** Reading a QR Code
 
 
-* Heed Safe Browsing warnings 
+** Heed Safe Browsing warnings 
 
 
 #+begin_notes
@@ -889,12 +889,12 @@ If not you, contact support.
  - deceptive billing warning: http://testsafebrowsing.appspot.com/s/billing.html 
 
 
-* Handout
+** Handout
  - TBW
 
-* Kudos
+** Kudos
  - Tech Access @ Kansas City Public Library for their [[https://docs.google.com/presentation/d/1p6XXcCyl31xuMWXMtIvQGkU8bXkzKj8k/edit?usp=drive_link&ouid=109217777975760832021&rtpof=true&sd=true][Passwords & Two-Factor Authentication (2FA) slides]]
-* Additional Resources
+** Additional Resources
  - [[https://ago.mo.gov/scams-frauds/][Missouri Attorney General - Scams & Frauds]]
    - [[https://ago.mo.gov/get-help/programs-services-from-a-z/identity-theft-data-security/smishing/][Smishing]]
  - AARP
