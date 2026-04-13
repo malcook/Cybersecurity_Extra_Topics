@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Cybersecurity Extra Topics</title>
+<meta name="author" content="Malcolm Cook"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/simple.css" id="theme"/>
+
+<link rel="stylesheet" href="./index.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<style type="text/css">
+	  <!--/*--><![CDATA[/*><!--*/
+	    .src             { background-color: #F5FFF5; position: relative; overflow: visible; }
+	    .src:before      { position: absolute; top: -15px; background: #ffffff; padding: 1px; border: 1px solid #000000; font-size: small; }
+	    .src-sh:before   { content: 'sh'; }
+	    .src-bash:before { content: 'sh'; }
+	    .src-R:before    { content: 'R'; }
+	    .src-perl:before { content: 'Perl'; }
+	    .src-sql:before  { content: 'SQL'; }
+	    .example         { background-color: #FFF5F5; }
+	  /*]]>*/-->
+       </style>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Cybersecurity Extra Topics</h1><p class="subtitle"></p>
+<h2 class="author">Malcolm Cook</h2><h2 class="email"><a href="mailto:Malcolm@KCShepherdsCenter.org">Malcolm@KCShepherdsCenter.org</a></h2><p class="date">Created: 2026-04-13 Mon 14:35</p>
+</section>
+<section>
+<section id="slide-org3706821">
+<h2 id="org3706821"><span class="section-number-2">1.</span> <a href="#org3706821">Review / Restatement</a></h2>
+<p>
+yes
+</p>
+</section>
+<section id="slide-org7615c97">
+<h3 id="org7615c97"><span class="section-number-3">1.1.</span> <a href="#org7615c97">blat</a></h3>
+<p>
+blat
+</p>
+</section>
+<section id="slide-org8b7b013">
+<h4 id="org8b7b013"><span class="section-number-4">1.1.1.</span> <a href="#org8b7b013">theree</a></h4>
+<p>
+foo bar
+</p>
+<ul>
+<li>Your phone and your email are used to verify</li>
+<li>About people trying to trick you</li>
+<li>Goal: fast correct decisions</li>
+
+</ul>
+</section>
+<section id="slide-org2e4d951">
+<h3 id="org2e4d951"><span class="section-number-3">1.2.</span> <a href="#org2e4d951">Four Rules</a></h3>
+</section>
+</section>
+<section>
+<section id="slide-org5415740">
+<h2 id="org5415740"><span class="section-number-2">2.</span> <a href="#org5415740">Account Takeover</a></h2>
+<ul>
+<li>Email controls everything</li>
+
+</ul>
+</section>
+<section id="slide-org2f85e3c">
+<h3 id="org2f85e3c"><span class="section-number-3">2.1.</span> <a href="#org2f85e3c">What Happens Next</a></h3>
+<ul>
+<li>Password reset</li>
+<li>Lockout</li>
+<li>Financial access</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgff550ff">
+<h2 id="orgff550ff"><span class="section-number-2">3.</span> <a href="#orgff550ff">Follow Your Browser's Warning</a></h2>
+<div class="outline-text-2" id="text-3">
+</div>
+</section>
+<section id="slide-org8f1be13">
+<h3 id="org8f1be13"><span class="section-number-3">3.1.</span> <a href="#org8f1be13">Demo</a></h3>
+<ul>
+<li>Show warning screen</li>
+<li>Decision: proceed or stop</li>
+
+</ul>
+</section>
+<section id="slide-orgdf5ad32">
+<h3 id="orgdf5ad32"><span class="section-number-3">3.2.</span> <a href="#orgdf5ad32">Correct Action</a></h3>
+<ul>
+<li>STOP</li>
+<li>Close page</li>
+<li>Do not override warning</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org73bb72d">
+<h2 id="org73bb72d"><span class="section-number-2">4.</span> <a href="#org73bb72d">Passwords best practices</a></h2>
+<div class="outline-text-2" id="text-4">
+</div>
+</section>
+<section id="slide-org8bc2517">
+<h3 id="org8bc2517"><span class="section-number-3">4.1.</span> <a href="#org8bc2517">Activity: Testing Password Strength</a></h3>
+<p>
+Visit one or more of these websites to test the strength of your 
+current passwords or practice creating strong passwords.
+</p>
+
+<ul>
+<li><a href="https://www.passwordmonster.com">https://www.passwordmonster.com</a></li>
+<li><a href="https://password.kaspersky.com/">https://password.kaspersky.com/</a></li>
+<li><a href="https://www.security.org/how-secure-is-my-password/">https://www.security.org/how-secure-is-my-password/</a></li>
+
+</ul>
+</section>
+<section id="slide-org73f15fe">
+<h3 id="org73f15fe"><span class="section-number-3">4.2.</span> <a href="#org73f15fe">Password Rule</a></h3>
+<ul>
+<li>One password per site</li>
+
+</ul>
+</section>
+<section id="slide-org1c78f08">
+<h4 id="org1c78f08"><span class="section-number-4">4.2.1.</span> <a href="#org1c78f08">Use A Password Manager !</a></h4>
+<div class="outline-text-4" id="text-4-2-1">
+</div>
+<ol class="org-ol">
+<li><a id="org2cfd2a8" name="org2cfd2a8"></a><a href="#org2cfd2a8">Using the Chrome browser's Password Manager</a><br></li>
+</ol>
+</section>
+<section id="slide-orgbdaa491">
+<h3 id="orgbdaa491"><span class="section-number-3">4.3.</span> <a href="#orgbdaa491">Use and "Authenticator"</a></h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+</section>
+<section id="slide-org7497688">
+<h4 id="org7497688"><span class="section-number-4">4.3.1.</span> <a href="#org7497688">Use Google Authenticator</a></h4>
+<p>
+TBW: screen snapshot
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org61c8a1f">
+<h2 id="org61c8a1f"><span class="section-number-2">5.</span> <a href="#org61c8a1f">Use Two-Factor Authentication (2FA)</a></h2>
+<div class="outline-text-2" id="text-5">
+</div>
+</section>
+<section id="slide-orgf73c925">
+<h3 id="orgf73c925"><span class="section-number-3">5.1.</span> <a href="#orgf73c925">what is it</a></h3>
+<p>
+factor of authentication
+Piece of evidence used to verify your identity during log-in
+</p>
+
+<p>
+There are 3 different types of factors:
+</p>
+<ul>
+<li>Knowledge factor</li>
+<li>Possession factor</li>
+<li>Inherence factor</li>
+
+</ul>
+</section>
+<section id="slide-org132ecf4">
+<h3 id="org132ecf4"><span class="section-number-3">5.2.</span> <a href="#org132ecf4">What are the different kinds of factors?</a></h3>
+<p>
+Knowledge factor – something you know, like a password or PIN
+Easiest to hack – there are only so many possible combinations of numbers, letters, and symbols you can use.
+</p>
+
+<p>
+Possession factor – something you own, like an email or a smartphone
+Much harder to hack into an account if you also have a code sent to a phone to confirm that it’s really you.
+</p>
+
+<p>
+Inherence factor – a part of you (facial ID or fingerprint)
+Hardest to hack –almost impossible to fake a fingerprint or part of yourself, making this the strongest security option of the three.
+</p>
+
+
+<p>
+with an  Authenticator App
+</p>
+<ul>
+<li>Codes generated on device</li>
+<li>Not tied to phone number</li>
+<li>Works offline</li>
+
+<li>Adds second step</li>
+<li>Protects even if password is stolen</li>
+
+</ul>
+</section>
+<section id="slide-org15291f8">
+<h3 id="org15291f8"><span class="section-number-3">5.3.</span> <a href="#org15291f8">Why Not SMS</a></h3>
+<ul>
+<li>Phone numbers can be hijacked</li>
+<li>Codes can be intercepted</li>
+<li>Attackers ask for codes</li>
+
+</ul>
+</section>
+<section id="slide-org9f10bb8">
+<h3 id="org9f10bb8"><span class="section-number-3">5.4.</span> <a href="#org9f10bb8">Use an Authenticator App</a></h3>
+<ul>
+<li>Codes generated on device</li>
+<li>Not tied to phone number</li>
+<li>Works offline</li>
+
+</ul>
+</section>
+<section id="slide-orgad15e43">
+<h3 id="orgad15e43"><span class="section-number-3">5.5.</span> <a href="#orgad15e43">How It Works</a></h3>
+<ul>
+<li>Scan QR code</li>
+<li>Enter 6-digit code</li>
+<li>Rotates every 30 seconds</li>
+
+</ul>
+</section>
+<section id="slide-org4441b94">
+<h3 id="org4441b94"><span class="section-number-3">5.6.</span> <a href="#org4441b94">Critical Rule</a></h3>
+<ul>
+<li>Never share your code</li>
+
+</ul>
+</section>
+<section id="slide-org33be09c">
+<h3 id="org33be09c"><span class="section-number-3">5.7.</span> <a href="#org33be09c">Backup Codes</a></h3>
+<ul>
+<li>Write them down</li>
+<li>Store safely</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org1668625">
+<h2 id="org1668625"><span class="section-number-2">6.</span> <a href="#org1668625">Demo: Password Manager (Live)</a></h2>
+<div class="outline-text-2" id="text-6">
+</div>
+</section>
+<section id="slide-orgfd0ad95">
+<h3 id="orgfd0ad95"><span class="section-number-3">6.1.</span> <a href="#orgfd0ad95">The Problem (Reuse)</a></h3>
+<ul>
+<li>Example login</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Most people reuse passwords. That’s how accounts get taken over.
+</p>
+
+</aside>
+
+<pre class="example" id="org2d5bc4b">
+Email: demo@example.com
+Password: Password123
+</pre>
+
+<aside class="notes">
+<p>
+This is what people actually do. It’s unsafe.
+</p>
+
+</aside>
+</section>
+<section id="slide-org94bad11">
+<h3 id="org94bad11"><span class="section-number-3">6.2.</span> <a href="#org94bad11">Let Chrome Generate</a></h3>
+<ul>
+<li>Right-click password field</li>
+<li>Select “Suggest strong password”</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+You don’t create passwords anymore. The browser does.
+</p>
+
+</aside>
+</section>
+<section id="slide-org22388e1">
+<h3 id="org22388e1"><span class="section-number-3">6.3.</span> <a href="#org22388e1">Save Password</a></h3>
+<ul>
+<li>Submit login</li>
+<li>Click “Save” when prompted</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Chrome stores it securely. You don’t need to remember it.
+</p>
+
+</aside>
+</section>
+<section id="slide-orge0145db">
+<h3 id="orge0145db"><span class="section-number-3">6.4.</span> <a href="#orge0145db">Autofill Demo</a></h3>
+<ul>
+<li>Log out</li>
+<li>Return to login page</li>
+<li>Select saved account</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Next time, it fills it in automatically.
+</p>
+
+</aside>
+</section>
+<section id="slide-org7eb74d2">
+<h3 id="org7eb74d2"><span class="section-number-3">6.5.</span> <a href="#org7eb74d2">Password Vault</a></h3>
+<ul>
+<li>Navigate to:</li>
+
+</ul>
+<pre class="example" id="orgf5acbb1">
+chrome://password-manager/passwords
+</pre>
+<ul>
+<li>View saved passwords</li>
+<li>Open one entry</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+All your passwords are stored here.
+</p>
+
+</aside>
+</section>
+<section id="slide-org2c3754d">
+<h3 id="org2c3754d"><span class="section-number-3">6.6.</span> <a href="#org2c3754d">Enable Sync</a></h3>
+<ul>
+<li>Open Settings</li>
+<li>Go to “You and Google → Sync”</li>
+<li>Ensure Passwords is ON</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+This makes your passwords available on your phone and other devices.
+</p>
+
+</aside>
+</section>
+<section id="slide-orgbffbe3d">
+<h3 id="orgbffbe3d"><span class="section-number-3">6.7.</span> <a href="#orgbffbe3d">Protect the Account</a></h3>
+<ul>
+<li>Go to:</li>
+
+</ul>
+<pre class="example" id="org660dd4d">
+https://myaccount.google.com/security
+</pre>
+<ul>
+<li>Enable 2-Step Verification</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+This only works safely if your Google account is protected.
+Turn this on. Use an authenticator app, not text messages.
+</p>
+
+</aside>
+</section>
+<section id="slide-orga2cf794">
+<h3 id="orga2cf794"><span class="section-number-3">6.8.</span> <a href="#orga2cf794">One Rule</a></h3>
+<ul>
+<li>Never reuse passwords</li>
+<li>Let the browser generate them</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Never reuse passwords. Let the browser handle it every time.
+</p>
+
+</aside>
+</section>
+<section id="slide-org6c7ee71">
+<h3 id="org6c7ee71"><span class="section-number-3">6.9.</span> <a href="#org6c7ee71">Optional: Edit Password</a></h3>
+<ul>
+<li>Open saved password</li>
+<li>Replace with generated one</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+You can always update weak passwords later.
+</p>
+
+</aside>
+</section>
+<section id="slide-orgcc8d0b4">
+<h3 id="orgcc8d0b4"><span class="section-number-3">6.10.</span> <a href="#orgcc8d0b4">Optional: Mobile Sync</a></h3>
+<ul>
+<li>Same passwords appear on phone</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Once sync is on, everything carries over automatically.
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-org206104d">
+<h2 id="org206104d"><span class="section-number-2">7.</span> <a href="#org206104d">Spam Filters Are Helpful, Not Sufficient</a></h2>
+<ul>
+<li>Some scams caught</li>
+<li>Many are not</li>
+<li>Inbox ≠ safe</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orga1e6372">
+<h2 id="orga1e6372"><span class="section-number-2">8.</span> <a href="#orga1e6372">Using ChatGPT to Check Emails</a></h2>
+<ul>
+<li>Paste suspicious email text</li>
+<li>Prompt: “Spam or not? Analyze this email”</li>
+<li>Do not include sensitive data</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgb48cd6c">
+<h2 id="orgb48cd6c"><span class="section-number-2">9.</span> <a href="#orgb48cd6c">What To Do (Starting Today)</a></h2>
+<ul>
+<li>Use a password manager.  Simplist is your browser (Chrome or Firefox).</li>
+<li>Let it generate passwords (never reuse passwords)</li>
+<li>Turn on sync so passwords are available on all devices</li>
+<li>Protect your main account (e.g. Google mail)
+<ul>
+<li>give it a very strong password</li>
+<li>that you will remember</li>
+<li>use two factor (2FS) authentication for even more security</li>
+<li>prefer to use an authenticator app (e.g. Google Authenticator) instead of SMS (text messaging) for your 2nd factor</li>
+
+</ul></li>
+<li>Configure your phone to automatically perform system updates.  Most are for securit.y</li>
+<li>Never click links in unexpected messages</li>
+<li>Never send money or gift cards on request</li>
+<li>Never share codes or passwords with anyone</li>
+<li>Verify using a known contact method (not the message)</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Keep this blunt and fast. This is the only slide they need to remember.
+Do not elaborate. Reinforce that partial adoption is still valuable, but these are the targets.
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-org0baba40">
+<h2 id="org0baba40"><span class="section-number-2">10.</span> <a href="#org0baba40">Need Help Setting This Up?</a></h2>
+<ul>
+<li>Bring your phone, tablet, or laptop</li>
+<li>We will help you:</li>
+
+</ul>
+<p>
+&ndash; Set up password manager
+&ndash; Enable 2FA
+&ndash; Practice recognizing scams
+</p>
+<ul>
+<li>No appointment needed</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Position this as practical help, not more teaching.
+Lower barrier to entry. Emphasize hands-on support.
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orgcd8bfe6">
+<h2 id="orgcd8bfe6"><span class="section-number-2">11.</span> <a href="#orgcd8bfe6">Drop-In Support Session</a></h2>
+<ul>
+<li>Location: [INSERT LOCATION]</li>
+<li>Time: [INSERT TIME]</li>
+<li>Contact: [INSERT CONTACT INFO]</li>
+
+</ul>
+
+<aside class="notes">
+<p>
+Keep logistics clear and minimal.
+Encourage attendance explicitly: most will not act without help.
+</p>
+
+</aside>
+</section>
+</section>
+<section>
+<section id="slide-orgd1f1c12">
+<h2 id="orgd1f1c12"><span class="section-number-2">12.</span> <a href="#orgd1f1c12">Social Time - Have you been hacked? Three stories!</a></h2>
+</section>
+</section>
+<section>
+<section id="slide-org8e21c8e">
+<h2 id="org8e21c8e"><span class="section-number-2">13.</span> <a href="#org8e21c8e">End</a></h2>
+</section>
+</section>
+<section>
+<section id="slide-org500690e">
+<h2 id="org500690e"><span class="section-number-2">14.</span> <a href="#org500690e">The Only Four Rules</a></h2>
+<ul>
+<li>Never click links in unexpected messages</li>
+<li>Never send money on request</li>
+<li>Never share codes or passwords</li>
+<li>Verify source of message using a known contact method</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org34982c0">
+<h2 id="org34982c0"><span class="section-number-2">15.</span> <a href="#org34982c0">TEST</a></h2>
+<div class="outline-text-2" id="text-15">
+</div>
+</section>
+<section id="slide-org9073c0e">
+<h4 id="org9073c0e"><span class="section-number-4">15.0.1.</span> <a href="#org9073c0e">Demo 1 (Decide Now)</a></h4>
+<pre class="example" id="org6695009">
+From: security@alerts-usbank.com
+Account restricted. Restore access now:
+http://usbank.verify-account-security.com
+</pre>
+</section>
+<section id="slide-org7746436">
+<h4 id="org7746436"><span class="section-number-4">15.0.2.</span> <a href="#org7746436">Demo 1 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Do not click links</li>
+
+</ul>
+</section>
+<section id="slide-org7af30b7">
+<h4 id="org7af30b7"><span class="section-number-4">15.0.3.</span> <a href="#org7af30b7">Demo 2 (Decide Now)</a></h4>
+<pre class="example" id="org1277b6a">
+Commerce Bank: fraud alert.
+Call (816) 555-0199 immediately.
+</pre>
+</section>
+<section id="slide-org9fc0935">
+<h4 id="org9fc0935"><span class="section-number-4">15.0.4.</span> <a href="#org9fc0935">Demo 2 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Verify using known contact</li>
+
+</ul>
+</section>
+<section id="slide-org46217fe">
+<h4 id="org46217fe"><span class="section-number-4">15.0.5.</span> <a href="#org46217fe">Demo 3 (Decide Now)</a></h4>
+<pre class="example" id="org3537591">
+Evergy disconnect today.
+Pay now: http://evergy-paynow.net
+</pre>
+</section>
+<section id="slide-orgfad8dc8">
+<h4 id="orgfad8dc8"><span class="section-number-4">15.0.6.</span> <a href="#orgfad8dc8">Demo 3 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Do not send money</li>
+
+</ul>
+</section>
+<section id="slide-orgfe1a27c">
+<h4 id="orgfe1a27c"><span class="section-number-4">15.0.7.</span> <a href="#orgfe1a27c">Demo 4 (Decide Now)</a></h4>
+<pre class="example" id="org394e955">
+This is Medicare.
+Verify your number to continue benefits.
+</pre>
+</section>
+<section id="slide-org8afb997">
+<h4 id="org8afb997"><span class="section-number-4">15.0.8.</span> <a href="#org8afb997">Demo 4 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Do not share information</li>
+
+</ul>
+</section>
+<section id="slide-org850784e">
+<h4 id="org850784e"><span class="section-number-4">15.0.9.</span> <a href="#org850784e">Demo 5 (Decide Now)</a></h4>
+<pre class="example" id="org2c0c4b6">
+Grandchild in trouble.
+Need gift cards urgently.
+</pre>
+</section>
+<section id="slide-org086fc2b">
+<h4 id="org086fc2b"><span class="section-number-4">15.0.10.</span> <a href="#org086fc2b">Demo 5 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Never send money</li>
+
+</ul>
+</section>
+<section id="slide-orgc90251f">
+<h4 id="orgc90251f"><span class="section-number-4">15.0.11.</span> <a href="#orgc90251f">Realistic Demo 1 (Decide Now)</a></h4>
+<pre class="example" id="orgcd990f3">
+Subject: Important: Action Needed on Your Account
+From: U.S. Bank &lt;security@alerts-usbank.com&gt;
+
+Dear Customer,
+
+We detected unusual activity on your account ending in 4821.
+
+Please confirm your identity:
+http://usbank.verify-account-security.com/login
+
+Failure to act may result in restrictions.
+
+U.S. Bank Fraud Prevention
+</pre>
+</section>
+<section id="slide-orga1f80e0">
+<h4 id="orga1f80e0"><span class="section-number-4">15.0.12.</span> <a href="#orga1f80e0">Realistic Demo 1 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Do not click links</li>
+
+</ul>
+</section>
+<section id="slide-org47c1fe4">
+<h4 id="org47c1fe4"><span class="section-number-4">15.0.13.</span> <a href="#org47c1fe4">Realistic Demo 2 (Decide Now)</a></h4>
+<pre class="example" id="org313ce99">
+Subject: USPS Delivery Issue
+From: USPS &lt;tracking@usps-delivery.com&gt;
+
+Your package is on hold.
+
+Confirm address:
+http://usps.com-track-help.net/resolve
+
+Tracking #: 940011223344
+</pre>
+</section>
+<section id="slide-orgf25853c">
+<h4 id="orgf25853c"><span class="section-number-4">15.0.14.</span> <a href="#orgf25853c">Realistic Demo 2 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Fake domain</li>
+<li>Rule: Do not click links</li>
+
+</ul>
+</section>
+<section id="slide-orgdc982a9">
+<h4 id="orgdc982a9"><span class="section-number-4">15.0.15.</span> <a href="#orgdc982a9">Realistic Demo 3 (Decide Now)</a></h4>
+<pre class="example" id="orge9149b2">
+Subject: Microsoft Security Alert
+From: Microsoft &lt;account-security@microsoft.com&gt;
+
+Unrecognized sign-in detected.
+
+Secure your account:
+https://login.microsoft.com.security-checkup.co
+</pre>
+</section>
+<section id="slide-orgb867250">
+<h4 id="orgb867250"><span class="section-number-4">15.0.16.</span> <a href="#orgb867250">Realistic Demo 3 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Verify independently</li>
+
+</ul>
+</section>
+<section id="slide-org5c8c932">
+<h4 id="org5c8c932"><span class="section-number-4">15.0.17.</span> <a href="#org5c8c932">Realistic Demo 4 (Decide Now)</a></h4>
+<pre class="example" id="org8eacd3b">
+SMS:
+Evergy: Service interruption today.
+Pay immediately:
+http://evergy-paynow.net
+</pre>
+</section>
+<section id="slide-org7c11b3a">
+<h4 id="org7c11b3a"><span class="section-number-4">15.0.18.</span> <a href="#org7c11b3a">Realistic Demo 4 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Do not send money</li>
+
+</ul>
+</section>
+<section id="slide-org507d9e9">
+<h4 id="org507d9e9"><span class="section-number-4">15.0.19.</span> <a href="#org507d9e9">Realistic Demo 5 (Decide Now)</a></h4>
+<pre class="example" id="orga4706d4">
+SMS:
+Hi Grandma, this is Jake.
+New phone. Need help paying a bill.
+Can you get gift cards?
+</pre>
+</section>
+<section id="slide-org8e4e2b3">
+<h4 id="org8e4e2b3"><span class="section-number-4">15.0.20.</span> <a href="#org8e4e2b3">Realistic Demo 5 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Never send money</li>
+
+</ul>
+</section>
+<section id="slide-org4aad1ae">
+<h4 id="org4aad1ae"><span class="section-number-4">15.0.21.</span> <a href="#org4aad1ae">Adversarial Demo 1 (Decide Now)</a></h4>
+<pre class="example" id="orgfe066c4">
+Subject: Your Amazon.com Order
+From: Amazon &lt;auto-confirm@amazon.com&gt;
+
+Order #: 113-9483921-5521983
+Total: $249.00
+
+If not you, call:
+1-888-280-4331
+</pre>
+</section>
+<section id="slide-orgad77e0a">
+<h4 id="orgad77e0a"><span class="section-number-4">15.0.22.</span> <a href="#orgad77e0a">Adversarial Demo 1 (Answer)</a></h4>
+<ul>
+<li>SCAM (likely)</li>
+<li>Forces panic response</li>
+<li>Rule: Verify independently</li>
+
+</ul>
+</section>
+<section id="slide-org8935e53">
+<h4 id="org8935e53"><span class="section-number-4">15.0.23.</span> <a href="#org8935e53">Adversarial Demo 2 (Decide Now)</a></h4>
+<pre class="example" id="org7341c6b">
+Subject: Security Code
+From: Google &lt;no-reply@accounts.google.com&gt;
+
+Your code is: 492771
+</pre>
+</section>
+<section id="slide-org09e96ba">
+<h4 id="org09e96ba"><span class="section-number-4">15.0.24.</span> <a href="#org09e96ba">Adversarial Demo 2 (Answer)</a></h4>
+<ul>
+<li>Contextual scam</li>
+<li>Someone else is asking for this code</li>
+<li>Rule: Never share codes</li>
+
+</ul>
+</section>
+<section id="slide-orgf1b9e78">
+<h4 id="orgf1b9e78"><span class="section-number-4">15.0.25.</span> <a href="#orgf1b9e78">Adversarial Demo 3 (Decide Now)</a></h4>
+<pre class="example" id="org6481655">
+Phone:
+“This is your bank fraud department.
+Can you confirm the code we sent?”
+</pre>
+</section>
+<section id="slide-org9de0c81">
+<h4 id="org9de0c81"><span class="section-number-4">15.0.26.</span> <a href="#org9de0c81">Adversarial Demo 3 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Never share codes</li>
+
+</ul>
+</section>
+<section id="slide-org2e7d26c">
+<h4 id="org2e7d26c"><span class="section-number-4">15.0.27.</span> <a href="#org2e7d26c">Adversarial Demo 4 (Decide Now)</a></h4>
+<pre class="example" id="orgbebf2f8">
+Subject: DocuSign Request
+From: DocuSign &lt;dse@docusign.net&gt;
+
+Review document:
+https://docusign.secure-docs-review.com
+</pre>
+</section>
+<section id="slide-orgc413bd8">
+<h4 id="orgc413bd8"><span class="section-number-4">15.0.28.</span> <a href="#orgc413bd8">Adversarial Demo 4 (Answer)</a></h4>
+<ul>
+<li>SCAM</li>
+<li>Rule: Do not click links</li>
+
+</ul>
+</section>
+<section id="slide-org920ad2c">
+<h4 id="org920ad2c"><span class="section-number-4">15.0.29.</span> <a href="#org920ad2c">Adversarial Demo 5 (Decide Now)</a></h4>
+<pre class="example" id="orgf4db527">
+Subject: Password Reset Confirmation
+From: PayPal &lt;service@paypal.com&gt;
+
+Your password was changed.
+
+If not you, contact support.
+</pre>
+</section>
+<section id="slide-org973aaa3">
+<h4 id="org973aaa3"><span class="section-number-4">15.0.30.</span> <a href="#org973aaa3">Adversarial Demo 5 (Answer)</a></h4>
+<ul>
+<li>Treat as threat</li>
+<li>Go directly to site</li>
+<li>Rule: Verify independently</li>
+
+</ul>
+</section>
+<section id="slide-orgf44e836">
+<h4 id="orgf44e836"><span class="section-number-4">15.0.31.</span> <a href="#orgf44e836">Practice Round</a></h4>
+<ul>
+<li>10 seconds each</li>
+<li>SAFE or SCAM</li>
+
+</ul>
+</section>
+<section id="slide-orgeb0f8af">
+<h4 id="orgeb0f8af"><span class="section-number-4">15.0.32.</span> <a href="#orgeb0f8af">Practice Items</a></h4>
+<ul>
+<li>Amazon confirm order</li>
+<li>USPS update address</li>
+<li>Friend attachment</li>
+<li>IRS demand</li>
+
+</ul>
+</section>
+<section id="slide-org8e53e02">
+<h4 id="org8e53e02"><span class="section-number-4">15.0.33.</span> <a href="#org8e53e02">Practice Answers</a></h4>
+<ul>
+<li>All SCAM</li>
+<li>Pattern: unexpected + action</li>
+
+</ul>
+</section>
+<section id="slide-org2bd3889">
+<h4 id="org2bd3889"><span class="section-number-4">15.0.34.</span> <a href="#org2bd3889">Final Test</a></h4>
+<ul>
+<li>8 items</li>
+<li>No discussion</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org2d9231c">
+<h2 id="org2d9231c"><span class="section-number-2">16.</span> <a href="#org2d9231c">If Unsure</a></h2>
+<ul>
+<li>Do nothing</li>
+<li>Verify independently</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgfdf780d">
+<h2 id="orgfdf780d"><span class="section-number-2">17.</span> <a href="#orgfdf780d">Summary</a></h2>
+<ul>
+<li>Scams = pressure</li>
+<li>Rules = defense</li>
+<li>Tools help, rules decide</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org9bed022">
+<h2 id="org9bed022"><span class="section-number-2">18.</span> <a href="#org9bed022">Android tips</a></h2>
+<div class="outline-text-2" id="text-18">
+</div>
+</section>
+<section id="slide-org755d502">
+<h3 id="org755d502"><span class="section-number-3">18.1.</span> <a href="#org755d502">Reading a QR Code</a></h3>
+</section>
+</section>
+<section>
+<section id="slide-org50c0aab">
+<h2 id="org50c0aab"><span class="section-number-2">19.</span> <a href="#org50c0aab">Heed Safe Browsing warnings</a></h2>
+<aside class="notes">
+<p>
+<a href="http://testsafebrowsing.appspot.com/">(Safe) Safe Browsing Testing Links</a>
+</p>
+
+</aside>
+
+
+<ul>
+<li>phishing warning: <a href="http://testsafebrowsing.appspot.com/s/phishing.html">http://testsafebrowsing.appspot.com/s/phishing.html</a></li>
+<li>malware warning: <a href="http://testsafebrowsing.appspot.com/s/malware.html">http://testsafebrowsing.appspot.com/s/malware.html</a></li>
+<li>unwanted software warning: <a href="http://testsafebrowsing.appspot.com/s/unwanted.html">http://testsafebrowsing.appspot.com/s/unwanted.html</a></li>
+<li>deceptive billing warning: <a href="http://testsafebrowsing.appspot.com/s/billing.html">http://testsafebrowsing.appspot.com/s/billing.html</a></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org5f87f0b">
+<h2 id="org5f87f0b"><span class="section-number-2">20.</span> <a href="#org5f87f0b">Handout</a></h2>
+<ul>
+<li>TBW</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgb9d25c6">
+<h2 id="orgb9d25c6"><span class="section-number-2">21.</span> <a href="#orgb9d25c6">Kudos</a></h2>
+<ul>
+<li>Tech Access @ Kansas City Public Library for their <a href="https://docs.google.com/presentation/d/1p6XXcCyl31xuMWXMtIvQGkU8bXkzKj8k/edit?usp=drive_link&amp;ouid=109217777975760832021&amp;rtpof=true&amp;sd=true">Passwords &amp; Two-Factor Authentication (2FA) slides</a></li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org78aacf4">
+<h2 id="org78aacf4"><span class="section-number-2">22.</span> <a href="#org78aacf4">Additional Resources</a></h2>
+<ul>
+<li><a href="https://ago.mo.gov/scams-frauds/">Missouri Attorney General - Scams &amp; Frauds</a>
+<ul>
+<li><a href="https://ago.mo.gov/get-help/programs-services-from-a-z/identity-theft-data-security/smishing/">Smishing</a></li>
+
+</ul></li>
+<li>AARP</li>
+<li>www.kclibrary.org/techaccess 816-701-3606 techaccess@kclibrary.org</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+transition:'none', slideNumber:true, center:false, progress:true, hash: true,
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } }]
+
+});
+
+</script>
+</body>
+</html>

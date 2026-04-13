@@ -1,0 +1,25 @@
+/* .reveal .title h1, */
+/* .reveal .title-slide h1 { */
+/*   text-transform: none !important; */
+/* } */
+
+
+.reveal h1 {
+  text-transform: none !important;
+}
+
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  text-transform: none;
+}
+
+.reveal .slides section {
+  text-align: left;
+}
+
+.reveal .slides section h1,
+.reveal .slides section h2 {
+  text-align: center;
+}
