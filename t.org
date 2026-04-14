@@ -1,0 +1,21 @@
+* Overview
+:PROPERTIES:
+:TOC:      headlines 1
+:END:
+
+* Use a password manager
+** afoo
+* Turn on two-factor authentication
+
+
+* Overview
+
+
+#+BEGIN_SRC emacs-lisp :results raw :exports results :eval export
+(let ((titles
+       (org-element-map (org-element-parse-buffer) 'headline
+         (lambda (h)
+           (when (= (org-element-property :level h) 1)
+             (org-element-property :raw-value h))))))
+  (mapconcat (lambda(x) (format "- %s" x)) titles "\n"))
+#+END_SRC
