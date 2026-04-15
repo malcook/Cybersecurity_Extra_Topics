@@ -29,21 +29,10 @@
 #+REVEAL_THEME: simple
 #+REVEAL_EXTRA_CSS: ./index.css
 
-# #+TOC: headlines 1
+* A few opinionated suggestions 
 
-* COMMENT this doesnt work
-(require 'org)
-(require 'org-make-toc)
-** Overview
+*Embrace* the Google "ecosystem" for security and safety:
 
-
-#+TOC: headlines 1
-
-#+BEGIN: toc :scope file :maxlevel 1 :exclude-tags "noexport"
-
-#+END:
-
-* What to do :notoc:
 #+BEGIN_SRC emacs-lisp :results raw :exports results :eval export
 (let ((titles
        (org-element-map (org-element-parse-buffer) 'headline
@@ -51,10 +40,12 @@
            (when (and (= (org-element-property :level h) 1)
                       (not (member "notoc" (org-element-property :tags h))))
              (org-element-property :raw-value h))))))
-  (mapconcat (lambda (x) (format "- %s" x)) titles "\n"))
+  (mapconcat (lambda (x) (format "- %s" x)) (cdr titles) "\n"))
 #+END_SRC 
 
-* Appreciate the risks
+* COMMENT malcolm.cook.kcsc LittleRedCorvette
+* COMMENT Appreciate the risks
+
 Account Takeover
 - Email controls everything
 
@@ -63,7 +54,8 @@ Account Takeover
 - Lockout
 - Financial access
   
-* Use Unique, Strong, Secure and Memorable passwords 
+* COMMENT Recap: 
+** Use Unique, Strong, Secure and Memorable passwords
 
 Especially on your main account (e.g. Google mail)
   - Unique: do not re-use password from some other site!
@@ -82,66 +74,157 @@ current passwords or practice creating strong passwords.
 
 
 
+* Use Google Chrome as your web browser 
+ - It is fast and state of the art
+ - It runs on your phone:  Android, iPhone
+ - It runs on your computer: Mac, Windows PC, Linux
+Best of all:
+ - It has very good in-built security and protection features
+
+* Use Enhanced Safe Browsing in Google Chrome
+ - Google maintains a list of websites which violate [[https://safebrowsing.google.com/#policies/][Google Safe Browsing Policies]]
+ - Used by all major browsers
+ - Chrome will warn you when you start to visit a site on the list
+ - *But only if* you have enabled [[https://support.google.com/accounts/answer/11577602?hl=en&visit_id=639118666636524766-3033337865&p=enhanced_safe_browsing&rd=1][Enhanced Safe Browsing]] 
+ - You can test individual sites yourself using [[https://transparencyreport.google.com/safe-browsing/search][Safe Browsing site status]]
+
+** Demo: Enhanced Safe Browsing Warnings
+
+What to do if a site triggers a Safe Browsing warning
+
+If you get any of these warning you should:
+
+- STOP
+- Close page
+- Do not override warning
 
 
-* Use a "Password Manager"
+*** Phishing warning
+  - URL: [[http://testsafebrowsing.appspot.com/s/phishing.html]]
+  - Browser Reaction: Full-page red warning: "Deceptive site ahead."
+  - Use Case: Demonstrates how browsers block sites designed to trick users into giving up passwords or credit card info.
 
-- Use a password manager.  Simplist is your browser (Chrome or Firefox).
+*** Malware warning
+  - URL: [[http://testsafebrowsing.appspot.com/s/malware.html]]
+  - Browser Reaction: Full-page red warning: "The site ahead contains malware."
+  - Use Case: Shows the protection against sites that attempt to install viruses or malicious code on a device.
+
+*** Unwanted software warning
+  - URL: [[http://testsafebrowsing.appspot.com/s/unwanted.html]]
+  - Browser Reaction: Warning: "The site ahead contains harmful programs."
+  - Use Case: Explains how browsers flag "adware" or programs that make unexpected changes to your computer (like changing your homepage).
+
+*** A site with no encryption (HTTP)
+  - URL: [[http://http.badssl.com/]]
+  - Browser Reaction: Shows "Not Secure" label in the address bar.
+  - Use Case: Best for showing the basic difference between HTTP and HTTPS.
+
+*** Recap: "https://", and "Secure" websites.
+ - "https://" ONLY means communication is (s)ecurely encrypted between your brower and the website.
+   - It does *not* mean the website is "safe" or "legitimate".
+
+*** What about the "Padlock" icon?,
+
+Most browsers now
+ - trim the leading "https://" from displaying (by default)
+ - have replaced the old "padlock" icon with a "shield" icon (Firefox) or "sliders" icon (Chrome).
+
+*** Why the change
+ - removes false sense of security the padlock icon suggested
+ - gives more space to the "OmniBox"
+
+It’s definitely a bit of a change for those of us who grew up being told to "look for the lock" before typing a
+password! The new rule of thumb is: If the browser isn't shouting at you with a "Not Secure" warning, you're on a
+standard encrypted connection.
+
+*** COMMENT
+
+**** A site with an out-of-date certificate
+  - URL: [[https://expired.badssl.com]]
+  - Browser Reaction: Full-page red "Your connection is not private" error.
+  - Use Case: Demonstrates what happens when a site owner forgets to renew their security credentials.
+
+**** A certificate meant for a different website
+  - URL: [[https://wrong.host.badssl.com]]
+  - Browser Reaction: Blocks the site with a privacy warning.
+  - Use Case: Explains how the browser verifies that a site is actually who it claims to be.
+
+**** A certificate not verified by a trusted authority
+  - URL: [[https://self-signed.badssl.com]]
+  - Browser Reaction: High-level security warning (untrusted CA).
+  - Use Case: Useful for explaining the "Chain of Trust" and why third-party verification matters.
+
+**** An HTTPS site loading HTTP images/content
+  - URL: [[https://mixed.badssl.com]]
+  - Browser Reaction: The "Tune" or "Shield" icon may show a warning about "Mixed Content."
+  - Use Case: Shows that a site can be partially insecure even if the main page uses HTTPS.
+
+
+* Use and protect a Google Account
+ - If you don't have one, visit https://google.com, in your web browser, choose sign-in and create one.
+ - It will be at the center of your security.  
+ - Give it an *Excellent* (Unique, Strong and Memorable) password!!!
+
+** Enable "Two-Factor Authentication" (2FA)
+
+
+*** What are the different kinds of factors?
+
+- Knowledge factor – something you know, like a password or PIN.   Easiest to hack – there are only so many possible combinations of numbers, letters, and symbols you can use.
+- Possession factor – something you own, like an email or a smartphone.  Much harder to hack into an account if you also have a code sent to a phone to confirm that it’s really you.
+- Inherence factor – a part of you (facial ID or fingerprint).  Hardest to hack – almost impossible to fake a fingerprint or part of yourself, making this the strongest security    option of the three.
+
+*** Why Not SMS (text messaging)
+- Phone numbers can be hijacked
+- Codes can be intercepted
+- Attackers ask for codes
+
+** Configure your Google Chrome "profile"
+
+Perform some basic initial configuration:
+ - Add your cell phone as a "recovery phone"
+ - Take the options to sync your history and tabs across browsers.  
+
+** Review your profile's Security settings
+ - In Chrome, click on ` three-dots menu > your account > Manage Google Account`
+ - select "Security & sign-in"
+
+
+** Install and use Google Authenticator"
+
+For your 2nd factor, prefer use an authenticator app (e.g. Google Authenticator) instead of SMS (text messaging)
+
+- Codes generated on device
+- Not tied to phone number
+- Works even if phone is offline
+- Protects even if password is stolen
+
+*** How It Works
+- Scan QR code
+- Enter 6-digit code
+- Rotates every 30 seconds
+
+*** Backup Codes
+- Write them down
+- Store safely
+
+*** Critical Rule
+- Never share your codes
+
+
+** Use Google Password Manager
+
+- You don’t create passwords anymore. The manager does it for you.
+- The are unique, strong.  They are not memorable.
+- Google has an  is your browser (Chrome or Firefox). The browser does.
 - Let it generate passwords (never reuse passwords)
+- Chrome stores it securely. You don’t need to remember it.
 
-** The Problem (Reuse)
-- Example login
 
-#+BEGIN_NOTES
-Most people reuse passwords. That’s how accounts get taken over.
-#+END_NOTES
-
-#+BEGIN_EXAMPLE
-Email: demo@example.com
-Password: Password123
-#+END_EXAMPLE
-
-#+BEGIN_NOTES
-This is what people actually do. It’s unsafe.
-#+END_NOTES
-
-** Let Chrome Generate
-- Right-click password field
-- Select “Suggest strong password”
-
-#+BEGIN_NOTES
-You don’t create passwords anymore. The browser does.
-#+END_NOTES
-
-** Save Password
-- Submit login
-- Click “Save” when prompted
-
-#+BEGIN_NOTES
-Chrome stores it securely. You don’t need to remember it.
-#+END_NOTES
-
-** Autofill Demo
-- Log out
-- Return to login page
-- Select saved account
-
-#+BEGIN_NOTES
-Next time, it fills it in automatically.
-#+END_NOTES
-
-** Password Vault
-- Navigate to:
-#+BEGIN_EXAMPLE
-chrome://password-manager/passwords
-#+END_EXAMPLE
-- View saved passwords
-- Open one entry
-
-#+BEGIN_NOTES
-All your passwords are stored here.
-#+END_NOTES
-
+*** Password Vault
+To manage passwords, visit
+ - chrome://password-manager/passwords - on your local device
+ - https://passwords.google.com/ - in the cloud (if your passwords are sync-ed)
 
 ** Enable Sync
 
@@ -153,188 +236,113 @@ Once sync is on, everything carries over automatically.
 - Go to “You and Google → Sync”
 - Ensure Passwords is ON
 
-#+BEGIN_NOTES
-This makes your passwords available on your phone and other devices.
-#+END_NOTES
 
-** Protect the Account
-- Go to:
-#+BEGIN_EXAMPLE
-https://myaccount.google.com/security
-#+END_EXAMPLE
-- Enable 2-Step Verification
+** Link your Google Account to your Google Chrome "profile"
+ - With it, Chrome can synchronize your phone(s) and computer(s): Tabs, Bookmarks, Passwords, Settings, Preferences
+ - Use it with sites that support [[https://www.google.com/account/about/sign-in-with-google/][Sign in with Google]], such as Reddit, Pinterest, eBay, Uber, DoorDash,
+   etc... (reducing the number of usernames and passwords you need to create or remember!)
 
-#+BEGIN_NOTES
-This only works safely if your Google account is protected.
-Turn this on. Use an authenticator app, not text messages.
-#+END_NOTES
+** Demo: Securing Your Digital Identity on a new site (github)
 
-** One Rule
-- Never reuse passwords
-- Let the browser generate them
+   Demonstrate the "Modern Security Stack":
+   - Password: Created and managed by Google Password Manager.
+   - Primary 2nd factor: Google Authenticator for high security.
+   - Backup 2nd factor: SMS (Text Message) for recovery.
 
-#+BEGIN_NOTES
-Never reuse passwords. Let the browser handle it every time.
-#+END_NOTES
+*** Step 1: Account Creation & Password Generation
+   - Go to [[https://github.com/signup]].
+   - Use your burner Gmail address.
+   - *Action:* Right-click the Password field and select "Generate password..."
+   - *Teaching Point:* Chrome creates a random string of characters that is impossible to guess, and saves it so you don't have to write it down.
 
-** Optional: Edit Password
-- Open saved password
-- Replace with generated one
+*** Step 2: Configure SMS 2FA (The "Safety Net")
+   - Navigate to *Settings* (top-right profile icon) > *Password and authentication*.
+   - Under "Two-factor authentication," click "Enable."
+   - Choose **SMS** as the first method.
+   - Enter your phone number, receive the text, and type in the code.
+   - *Teaching Point:* Explain that even though we have a phone number linked, we are going to add an even better layer next.
 
-#+BEGIN_NOTES
-You can always update weak passwords later.
-#+END_NOTES
+*** Step 3: Configure Google Authenticator (The "Gold Standard")
+   - In the same "Two-factor methods" section, click "Add" next to **Authenticator app**.
+   - A QR code will appear on the projector.
+   - *Action:* Open **Google Authenticator** on your phone, tap the "+" and scan the code.
+   - Type the 6-digit rolling code into GitHub to verify the link.
+   - *Teaching Point:* This is more secure than SMS because the code stays on your device and can't be "intercepted" by scammers.
 
-** Optional: Mobile Sync
-- Same passwords appear on phone
+*** Step 4: Save Your Recovery Codes in a file
+   - GitHub will display a list of one-time use "Recovery Codes".
+   - If you lose your phone, you can use each one one-time (only) to get back in.
+   - Download it and save it someplace "safe".
+   - Confirm that you have downloaded them.
 
-#+BEGIN_NOTES
+*** Step 5: Save Your Recovery Codes in Google Password Manage
+   - 
+   - *Action:* Open Chrome Settings > *Passwords and Autofill* > *Google Password Manager*.
+   - Find the GitHub entry, click "Edit," and paste these codes into the **"Note"** section.
 
-#+END_NOTES
+*** Step 6: The "Security Check" Login
+   - Log out of GitHub.
+   - Click "Sign In" and let Google Password Manager fill the username/password.
+   - When prompted for the 2FA code, show the class the 30-second timer on your phone.
+   - Enter the code to finish the demo.
 
-* Use "Two-Factor Authentication" (2FA) 
 
-use two factor (2FS) authentication when available for even more security
-** what is it
-factor of authentication
-Piece of evidence used to verify your identity during log-in
+* Use email "spam filters" 
 
-** What are the different kinds of factors?
+ - Be aware! Automated spam filters make errors (both kinds!).
+ - Review the contents of you spam folder periodically
+ - Marking messages that you know to be spam helps.
 
-- Knowledge factor – something you know, like a password or PIN
-  - Easiest to hack – there are only so many possible combinations of numbers, letters, and symbols you can use.
-- Possession factor – something you own, like an email or a smartphone
-  - Much harder to hack into an account if you also have a code sent to a phone to confirm that it’s really you.
-- Inherence factor – a part of you (facial ID or fingerprint)
-  - Hardest to hack – almost impossible to fake a fingerprint or part of yourself, making this the strongest security
-    option of the three.
-
-** Why Not SMS
-- Phone numbers can be hijacked
-- Codes can be intercepted
-- Attackers ask for codes
-
-* Use an "Authenticator App" when possible
-
-for your 2nd factor, prefer use an authenticator app (e.g. Google Authenticator) instead of SMS (text messaging)
-
-with an  Authenticator App
-- Codes generated on device
-- Not tied to phone number
-- Works offline
-
-- Adds second step
-- Protects even if password is stolen
-
-- Codes generated on device
-- Not tied to phone number
-- Works offline
-
-** How It Works
-- Scan QR code
-- Enter 6-digit code
-- Rotates every 30 seconds
-
-** Backup Codes
-- Write them down
-- Store safely
-
-** Critical Rule
-- Never share your code
-
-** Use Google Authenticator
-TBW: screen snapshot
-
-* Use your email's spam filters 
-- Are Helpful, Not Sufficient
-- Some scams caught
-- Many are not
-- Inbox ≠ safe
-
-* Use AI (such as ChatGPT) to test suspicious Emails
-- Paste suspicious email text
-- Prompt: “Spam or not? Analyze this email”
-- Do not include sensitive data
-
-* Follow your web browser's warning
-
- - phishing warning: http://testsafebrowsing.appspot.com/s/phishing.html 
- - malware warning: http://testsafebrowsing.appspot.com/s/malware.html 
- - unwanted software warning: http://testsafebrowsing.appspot.com/s/unwanted.html 
- - deceptive billing warning: http://testsafebrowsing.appspot.com/s/billing.html 
-
-If you get any of these warning you should:
-
-- STOP
-- Close page
-- Do not override warning
-
-#+begin_notes
-[[http://testsafebrowsing.appspot.com/][(Safe) Safe Browsing Testing Links]]
-#+end_notes
+* Use AI to test suspicious Emails
+- ChatGPT and Gemini are pretty good spam detectors!  You can:
+  - Provide a Prompt: “Spam or not? Analyze this email”
+  - Paste suspicious email text.
+- Do not include sensitive data!
 
 * Keep your phone and computers up-to-date
 
- - Configure your phone to automatically perform system updates.
- - Most are for security.
+Configure your phone to automatically perform system updates.
+
+ - Why: Most are for security.
+ - How: (example) On Android: choose `System > Search Settings for "System Updates" > Smart Updates: enabled`
+
+* Explore additional resources
+ - [[https://safety.google/][Google Safety Center]]
+ - [[https://www.digitallearn.org/][Digital Learn]] has [[https://att.digitallearn.org/courses/online-frauds-and-scams-2025-4b250ccd-4488-4c68-b062-63f50e4dce14][Online Frauds and Scams (2025)]] 
+ - AARP:  [[https://oats.org/][OATS (Older Adults Technology Services)]] -  [[https://seniorplanet.org/][Senior Planet]] - [[https://www.aarp.org/money/scams-fraud/about-fraud-watch-network/?cmp=RDRCT-CSN-FRD-ABT-APR2021][AARP Fraud Watch Network]] - [[https://www.aarp.org/money/scams-fraud/?Intcmp=AE-FRDSC-ABT-FRC#01/#][Scam, Fraud Alerts - Protect Your Digital Identity]]  - [[https://www.aarp.org/money/scams-fraud/identity-theft/][Identity Theft and Fraud Can Be Devastating. Here’s How to Avoid It]]
+ - [[https://ago.mo.gov/scams-frauds/][Missouri Attorney General - Scams & Frauds]] - notably: [[https://ago.mo.gov/get-help/programs-services-from-a-z/identity-theft-data-security/smishing/][Smishing]]
 
 * Get More Help
-** Get Help Setting This Up
-- Bring your phone, tablet, or laptop to our Drop-in hour. We will help you:
-  - Set up password manager
-  - Enable 2FA
-  - Practice recognizing scams
+Bring your phone, tablet, or laptop to our Drop-in hour. 
+  - No appointment needed
+  - Hands on support
 
-- No appointment needed
-- Hands on support
+** We will help you:
+ - Create a Google Account
+ - Secure it with 2FA 
+ - Set up and use the Google Password Manager
+ - Syncronize your Google Chrome profile (passwords, bookmarks, etc)
+ - Install an Authenticator App
+ - Secure other accounts Enable 2FA
 
-*** Drop-In Support Session
+** Drop-In Support Session
 - Location: Here!
 - Time: Now!
 - Contact: Anyone 
 
-** Ask Questions!
-*** Questions from Bishop Spenser Place Users
- - When must I not use a public WIFI, such as ours (BSPGUEST)?
- - How can I obtain the use of a private (e.g. more secure) WIFI?
- - How can I securely manage my passwords?
- - How can I safely pay for purchases on the internet?
- - Is there a way I can safely monitor transactions occurring on my financial accounts and credit card accounts?
- - Where and how can I safely download software that is virus and spam free?
- - Some people use a dedicated single computing device to manage their financial and health affairs. How would this work? 
- - How can I backup up my critical information in a secure manner?
- - How can I reduce the impact and risk of spam or virus phone calls and tech messages?
- - And finally…I have a lot of emails (and text messages) in my inbox, and I don't know what to do with them.  I am afraid I will miss important messages.  What should I do?
-
- 
-* Share your experiences!
+* COMMENT
+** Share your experiences!
  - Social Time - Have you been hacked? Three stories!
 
-* Explore additional resources
- - www.kclibrary.org/techaccess 816-701-3606 techaccess@kclibrary.org
- - Tech Access @ Kansas City Public Library for their [[https://docs.google.com/presentation/d/1p6XXcCyl31xuMWXMtIvQGkU8bXkzKj8k/edit?usp=drive_link&ouid=109217777975760832021&rtpof=true&sd=true][Passwords & Two-Factor Authentication (2FA) slides]]
- - [[https://ago.mo.gov/scams-frauds/][Missouri Attorney General - Scams & Frauds]]
-   - [[https://ago.mo.gov/get-help/programs-services-from-a-z/identity-theft-data-security/smishing/][Smishing]]
- - AARP has [[https://oats.org/][OATS (Older Adults Technology Services)]] and [[https://seniorplanet.org/][Senior Planet]] from AARP
- - [[https://www.digitallearn.org/][Digital Learn]]
-   - [[https://att.digitallearn.org/courses/online-frauds-and-scams-2025-4b250ccd-4488-4c68-b062-63f50e4dce14][Online Frauds and Scams (2025)]] - "Learn how to protect yourself from fraud and keep your accounts and devices safe from online scams."
-   - ATT's "rebranded a" - https://att.digitallearn.org/
 
-
-
-
-* Review these Four Rules
+** Review these Four Rules
 - Never click links in unexpected messages
 - Never send money or gift cards on request
 - Never share codes or passwords with anyone
 - Verify using a known contact method (not the message)
 
-#+BEGIN_NOTES
-Keep this blunt and fast. This is the only slide they need to remember.
-Do not elaborate. Reinforce that partial adoption is still valuable, but these are the targets.
-#+END_NOTES
 
-** If Unsure
+*** If Unsure
 - Do nothing
 - Verify independently
 
@@ -344,62 +352,62 @@ Do not elaborate. Reinforce that partial adoption is still valuable, but these a
 - Rules = defense
 - Tools help, rules decide
 
-** TEST
-**** Demo 1 (Decide Now)
+*** TEST
+***** Demo 1 (Decide Now)
 #+BEGIN_EXAMPLE
 From: security@alerts-usbank.com
 Account restricted. Restore access now:
 http://usbank.verify-account-security.com
 #+END_EXAMPLE
 
-**** Demo 1 (Answer)
+***** Demo 1 (Answer)
 - SCAM
 - Rule: Do not click links
 
-**** Demo 2 (Decide Now)
+***** Demo 2 (Decide Now)
 #+BEGIN_EXAMPLE
 Commerce Bank: fraud alert.
 Call (816) 555-0199 immediately.
 #+END_EXAMPLE
 
-**** Demo 2 (Answer)
+***** Demo 2 (Answer)
 - SCAM
 - Rule: Verify using known contact
 
-**** Demo 3 (Decide Now)
+***** Demo 3 (Decide Now)
 #+BEGIN_EXAMPLE
 Evergy disconnect today.
 Pay now: http://evergy-paynow.net
 #+END_EXAMPLE
 
-**** Demo 3 (Answer)
+***** Demo 3 (Answer)
 - SCAM
 - Rule: Do not send money
 
-**** Demo 4 (Decide Now)
+***** Demo 4 (Decide Now)
 #+BEGIN_EXAMPLE
 This is Medicare.
 Verify your number to continue benefits.
 #+END_EXAMPLE
 
-**** Demo 4 (Answer)
+***** Demo 4 (Answer)
 - SCAM
 - Rule: Do not share information
 
-**** Demo 5 (Decide Now)
+***** Demo 5 (Decide Now)
 #+BEGIN_EXAMPLE
 Grandchild in trouble.
 Need gift cards urgently.
 #+END_EXAMPLE
 
-**** Demo 5 (Answer)
+***** Demo 5 (Answer)
 - SCAM
 - Rule: Never send money
 
 
 
 
-**** Realistic Demo 1 (Decide Now)
+***** Realistic Demo 1 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Important: Action Needed on Your Account
 From: U.S. Bank <security@alerts-usbank.com>
@@ -416,11 +424,11 @@ Failure to act may result in restrictions.
 U.S. Bank Fraud Prevention
 #+END_EXAMPLE
 
-**** Realistic Demo 1 (Answer)
+***** Realistic Demo 1 (Answer)
 - SCAM
 - Rule: Do not click links
 
-**** Realistic Demo 2 (Decide Now)
+***** Realistic Demo 2 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: USPS Delivery Issue
 From: USPS <tracking@usps-delivery.com>
@@ -433,12 +441,12 @@ http://usps.com-track-help.net/resolve
 Tracking #: 940011223344
 #+END_EXAMPLE
 
-**** Realistic Demo 2 (Answer)
+***** Realistic Demo 2 (Answer)
 - SCAM
 - Fake domain
 - Rule: Do not click links
 
-**** Realistic Demo 3 (Decide Now)
+***** Realistic Demo 3 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Microsoft Security Alert
 From: Microsoft <account-security@microsoft.com>
@@ -449,11 +457,11 @@ Secure your account:
 https://login.microsoft.com.security-checkup.co
 #+END_EXAMPLE
 
-**** Realistic Demo 3 (Answer)
+***** Realistic Demo 3 (Answer)
 - SCAM
 - Rule: Verify independently
 
-**** Realistic Demo 4 (Decide Now)
+***** Realistic Demo 4 (Decide Now)
 #+BEGIN_EXAMPLE
 SMS:
 Evergy: Service interruption today.
@@ -461,11 +469,11 @@ Pay immediately:
 http://evergy-paynow.net
 #+END_EXAMPLE
 
-**** Realistic Demo 4 (Answer)
+***** Realistic Demo 4 (Answer)
 - SCAM
 - Rule: Do not send money
 
-**** Realistic Demo 5 (Decide Now)
+***** Realistic Demo 5 (Decide Now)
 #+BEGIN_EXAMPLE
 SMS:
 Hi Grandma, this is Jake.
@@ -473,11 +481,11 @@ New phone. Need help paying a bill.
 Can you get gift cards?
 #+END_EXAMPLE
 
-**** Realistic Demo 5 (Answer)
+***** Realistic Demo 5 (Answer)
 - SCAM
 - Rule: Never send money
 
-**** Adversarial Demo 1 (Decide Now)
+***** Adversarial Demo 1 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Your Amazon.com Order
 From: Amazon <auto-confirm@amazon.com>
@@ -489,12 +497,12 @@ If not you, call:
 1-888-280-4331
 #+END_EXAMPLE
 
-**** Adversarial Demo 1 (Answer)
+***** Adversarial Demo 1 (Answer)
 - SCAM (likely)
 - Forces panic response
 - Rule: Verify independently
 
-**** Adversarial Demo 2 (Decide Now)
+***** Adversarial Demo 2 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Security Code
 From: Google <no-reply@accounts.google.com>
@@ -502,23 +510,23 @@ From: Google <no-reply@accounts.google.com>
 Your code is: 492771
 #+END_EXAMPLE
 
-**** Adversarial Demo 2 (Answer)
+***** Adversarial Demo 2 (Answer)
 - Contextual scam
 - Someone else is asking for this code
 - Rule: Never share codes
 
-**** Adversarial Demo 3 (Decide Now)
+***** Adversarial Demo 3 (Decide Now)
 #+BEGIN_EXAMPLE
 Phone:
 “This is your bank fraud department.
 Can you confirm the code we sent?”
 #+END_EXAMPLE
 
-**** Adversarial Demo 3 (Answer)
+***** Adversarial Demo 3 (Answer)
 - SCAM
 - Rule: Never share codes
 
-**** Adversarial Demo 4 (Decide Now)
+***** Adversarial Demo 4 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: DocuSign Request
 From: DocuSign <dse@docusign.net>
@@ -527,11 +535,11 @@ Review document:
 https://docusign.secure-docs-review.com
 #+END_EXAMPLE
 
-**** Adversarial Demo 4 (Answer)
+***** Adversarial Demo 4 (Answer)
 - SCAM
 - Rule: Do not click links
 
-**** Adversarial Demo 5 (Decide Now)
+***** Adversarial Demo 5 (Decide Now)
 #+BEGIN_EXAMPLE
 Subject: Password Reset Confirmation
 From: PayPal <service@paypal.com>
@@ -541,31 +549,45 @@ Your password was changed.
 If not you, contact support.
 #+END_EXAMPLE
 
-**** Adversarial Demo 5 (Answer)
+***** Adversarial Demo 5 (Answer)
 - Treat as threat
 - Go directly to site
 - Rule: Verify independently
 
 
-**** Practice Round
+***** Practice Round
 - 10 seconds each
 - SAFE or SCAM
 
-**** Practice Items
+***** Practice Items
 - Amazon confirm order
 - USPS update address
 - Friend attachment
 - IRS demand
 
-**** Practice Answers
+***** Practice Answers
 - All SCAM
 - Pattern: unexpected + action
 
-**** Final Test
+***** Final Test
 - 8 items
 - No discussion
 
 
+
+
+** Ask Questions!
+*** Questions from Bishop Spenser Place Users
+ - When must I not use a public WIFI, such as ours (BSPGUEST)?
+ - How can I obtain the use of a private (e.g. more secure) WIFI?
+ - How can I securely manage my passwords?
+ - How can I safely pay for purchases on the internet?
+ - Where and how can I safely download software that is virus and spam free?
+ - Some people use a dedicated single computing device to manage their financial and health affairs. How would this work? 
+ - How can I backup up my critical information in a secure manner?
+ - How can I reduce the impact and risk of spam or virus phone calls and tech messages?
+ - Is there a way I can safely monitor transactions occurring on my financial accounts and credit card accounts?
+ - And finally…I have a lot of emails (and text messages) in my inbox, and I don't know what to do with them.  I am afraid I will miss important messages.  What should I do?
 
 
 * COMMENT
